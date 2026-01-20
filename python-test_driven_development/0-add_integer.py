@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+
+Module composed by a function that multiplies 2 matrices
+
+"""
+
+
 def add_integer(a, b=98):
     """ Function that adds two integer and/or float numbers
 
