@@ -10,11 +10,9 @@ def lazy_matrix_mul(m_a, m_b):
     Function that multiplies 2 matrices using numpy
     """
 
-    # Vérifier que m_a et m_b sont des listes
-    if not isinstance(m_a, list):
-        raise TypeError("m_a must be a list")
-    if not isinstance(m_b, list):
-        raise TypeError("m_b must be a list")
+    # Cas particulier : si m_a ou m_b n'est pas une liste → scalar
+    if not isinstance(m_a, list) or not isinstance(m_b, list):
+        raise TypeError("Scalar operands are not allowed, use '*' instead")
 
     # Vérifier qu’ils ne sont pas vides
     if m_a == [] or m_a == [[]]:
@@ -41,7 +39,4 @@ def lazy_matrix_mul(m_a, m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
     # Multiplier
-    try:
-        return np.matmul(m_a, m_b)
-    except Exception:
-        raise TypeError("Scalar operands are not allowed, use '*' instead")
+    return np.matmul(m_a, m_b)
