@@ -20,15 +20,17 @@ class Square:
         """
         return (self.__size ** 2)
 
+    @property
     def size(self):
-        """ Getter method to return the size value
+        """ Method to return the size value
         """
         return (self.__size)
 
+    @size.setter
     def size(self, value):
-        """Setter method to set the size value of the square object
+        """Method to set the size value of the square object
         """
-        if not isinstance(val4, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an interger")
         elif value < 0:
             raise ValueError("size must be >= 0")
