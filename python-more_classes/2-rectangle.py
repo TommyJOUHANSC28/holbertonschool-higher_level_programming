@@ -12,9 +12,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-        if height == 0 or width == 0:
-            return 0
-
     @property
     def width(self):
         """Method to return the value of the rectangle
@@ -57,4 +54,6 @@ class Rectangle:
     def perimeter(self):
         """that returns the rectangle perimeter
         """
-        return (2 * ((self.__height) + (self.__width)))
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        return 2 * (self.__height + self.__width)
