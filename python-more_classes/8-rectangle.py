@@ -77,8 +77,7 @@ class Rectangle:
                str of the rectangle
         """
         if self.width == 0 or self.height == 0:
-            print("")
-            return 0
+            return ("")
         lines = []
         for i in range(self.height):
             lines.append(str(self.print_symbol) * self.width)
@@ -123,6 +122,6 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
-            return(rect_1)
+            return (rect_1)
         else:
             return (rect_2)
