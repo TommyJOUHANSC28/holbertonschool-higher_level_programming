@@ -115,7 +115,7 @@ class Rectangle:
             an instance of the Rectangle class
 
         Returns:
-            The bigger Rectangle between rect_1 and rect_2
+            The bigger Rectangle
 
         """
         if not isinstance(rect_1, Rectangle):
