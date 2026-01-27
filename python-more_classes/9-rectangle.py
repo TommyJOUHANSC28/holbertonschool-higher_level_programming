@@ -6,11 +6,12 @@
 class Rectangle:
     """Class Rectangle that defines a square."""
 
+    """ Initialize of public classes attribute"""
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Mehod to initialize the square object
+        """Method to initialize the square object
 
            Args:
             width: rectangle width
